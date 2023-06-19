@@ -15,7 +15,11 @@ db.on("error", (error) => console.log(error));
 db.once("open", () => console.log("Połączono z bazą"));
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 const users = require("./routes/users");
 app.use("/users", users);
