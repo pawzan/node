@@ -6,7 +6,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 mongoose.set("strictQuery", false);
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect("mongodb+srv://pawelzane:zane@cluster0.tjdj4k0.mongodb.net", {
   useNewUrlParser: true,
 });
 const db = mongoose.connection;
