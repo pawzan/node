@@ -17,7 +17,10 @@ db.once("open", () => console.log("Połączono z bazą"));
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "https://64909fac9ea332202ed1a47d--fastidious-ganache-43d67f.netlify.app",
+      "http://localhost:3000",
+    ],
   })
 );
 
